@@ -1,0 +1,28 @@
+# Build outputs
+bin/
+obj/
+out/
+dist/
+publish/
+
+# IDE / editor
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Local environment / secrets
+.env
+.env.*
+*.pfx
+*.key
+*.pem
+
+# Logs and runtime state
+*.log
+logs/
+crash-dumps/
