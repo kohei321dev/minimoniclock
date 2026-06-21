@@ -12,6 +12,27 @@ The first target display is JAPANNEXT `JN-MD-IPS7842`, a 7.8-inch `400x1280` dis
 - Windows desktop runtime.
 - No activity logs, history, cloud sync, or external communication.
 
+## Development
+
+Requirements:
+
+- Windows 11
+- .NET SDK 8
+
+Run:
+
+```powershell
+dotnet run --project src/Minimoniclock/Minimoniclock.csproj
+```
+
+For local launch and display orientation steps, see [Windows local usage](./docs/windows-local-usage.md).
+
+Build:
+
+```powershell
+dotnet build src/Minimoniclock/Minimoniclock.csproj
+```
+
 ## Future Scope
 
 - Pomodoro timer.
@@ -26,4 +47,6 @@ The first target display is JAPANNEXT `JN-MD-IPS7842`, a 7.8-inch `400x1280` dis
 - [request definition](./docs/01-request-definition.md)
 - [requirements definition](./docs/02-requirements-definition.md)
 - [feasibility and design notes](./docs/03-feasibility-and-design-notes.md)
+- [Windows local usage](./docs/windows-local-usage.md)
+- [phase 1 acceptance checklist](./docs/phase1-acceptance-checklist.md)
 - [open items](./docs/99-open-items.md)
