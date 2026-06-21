@@ -14,6 +14,7 @@
 - [要件定義](./02-requirements-definition.md)
 - [実現性・設計検討](./03-feasibility-and-design-notes.md)
 - [フェーズ計画と Issue 分割](./04-phase-plan-and-issue-slice.md)
+- [Windows ローカル起動と縦横表示](./windows-local-usage.md)
 - [Phase 1 受け入れチェックリスト](./phase1-acceptance-checklist.md)
 - [ADR-0001: Phase 1 は WPF / .NET で実装する](./adr/0001-use-wpf-dotnet-for-phase1.md)
 - [未対応・未決リスト](./99-open-items.md)
