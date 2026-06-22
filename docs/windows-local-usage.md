@@ -23,6 +23,22 @@ git switch codex/phase1-wpf-clock
 
 PowerShell または Windows Terminal で repository root から実行する。
 
+推奨:
+
+```powershell
+.\run-minimoniclock.cmd
+```
+
+ランチャーは `.NET SDK 8` の有無を確認し、必要に応じて build したあと、ビルド済み exe を起動する。
+
+ビルドを省略して起動する場合:
+
+```powershell
+.\run-minimoniclock.cmd -NoBuild
+```
+
+`dotnet run` で直接起動する場合:
+
 ```powershell
 dotnet run --project src/Minimoniclock/Minimoniclock.csproj
 ```

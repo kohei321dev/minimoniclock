@@ -22,6 +22,12 @@ Requirements:
 Run:
 
 ```powershell
+.\run-minimoniclock.cmd
+```
+
+Direct `dotnet run`:
+
+```powershell
 dotnet run --project src/Minimoniclock/Minimoniclock.csproj
 ```
 
