@@ -6,7 +6,17 @@
 - `.NET SDK 8` がインストールされている。
 - repository が Windows ローカルに clone されている。
 
-## clone
+## GitHub から zip をダウンロードして起動する
+
+1. GitHub の repository ページで `Code` を押す。
+2. `Download ZIP` を選ぶ。
+3. ダウンロードした zip を展開する。
+4. 展開したフォルダを開く。
+5. `run-minimoniclock.cmd` を実行する。
+
+ランチャーは `.NET SDK 8` の有無を確認し、必要に応じて build したあと、ビルド済み exe を起動する。
+
+## clone して起動する
 
 ```powershell
 git clone git@github.com:kohei321dev/minimoniclock.git
@@ -19,9 +29,25 @@ Phase 1 実装確認中のブランチを使う場合:
 git switch codex/phase1-wpf-clock
 ```
 
-## 起動
+## コマンドから起動
 
 PowerShell または Windows Terminal で repository root から実行する。
+
+推奨:
+
+```powershell
+.\run-minimoniclock.cmd
+```
+
+ランチャーは `.NET SDK 8` の有無を確認し、必要に応じて build したあと、ビルド済み exe を起動する。
+
+ビルドを省略して起動する場合:
+
+```powershell
+.\run-minimoniclock.cmd -NoBuild
+```
+
+`dotnet run` で直接起動する場合:
 
 ```powershell
 dotnet run --project src/Minimoniclock/Minimoniclock.csproj

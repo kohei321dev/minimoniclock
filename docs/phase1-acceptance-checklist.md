@@ -9,6 +9,7 @@
 ## ローカル起動
 
 - [ ] `.NET SDK 8` がインストールされている。
+- [ ] `.\run-minimoniclock.cmd` で起動できる。
 - [ ] `dotnet run --project src/Minimoniclock/Minimoniclock.csproj` で起動できる。
 - [ ] ネットワーク接続なしで起動できる。
 
