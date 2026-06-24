@@ -47,6 +47,14 @@ PowerShell または Windows Terminal で repository root から実行する。
 .\run-minimoniclock.cmd -NoBuild
 ```
 
+ランチャーは通常、アプリ終了まで console を開いたままにする。起動直後に終了した場合は、終了までの秒数と app log directory を表示する。
+
+console を待機させずに起動する場合:
+
+```powershell
+.\run-minimoniclock.cmd -Detached
+```
+
 `dotnet run` で直接起動する場合:
 
 ```powershell

@@ -35,6 +35,8 @@
 .\run-minimoniclock.cmd -NoBuild
 ```
 
+ランチャーは通常、アプリ終了まで console を開いたままにします。起動直後に終了した場合は、終了までの秒数と app log directory を表示します。console を待機させずに起動する場合は `.\run-minimoniclock.cmd -Detached` を使います。
+
 直接 `dotnet run` する場合:
 
 ```powershell
