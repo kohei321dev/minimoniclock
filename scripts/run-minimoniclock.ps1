@@ -2,6 +2,7 @@
 param(
     [switch]$NoBuild,
     [switch]$Detached,
+    [string]$WindowSize,
     [int]$StartupGraceSeconds = 3
 )
 
@@ -46,13 +47,24 @@ if (-not (Test-Path $ExePath)) {
 Write-Host "Starting minimoniclock..."
 Write-Host "App logs: $LogDirectory"
 
+$AppArguments = @()
+if (-not [string]::IsNullOrWhiteSpace($WindowSize)) {
+    if ($WindowSize -notmatch "^\d+x\d+$") {
+        Fail "WindowSize must use WIDTHxHEIGHT format, for example 1280x400."
+    }
+
+    $AppArguments += "--window-size"
+    $AppArguments += $WindowSize
+    Write-Host "Initial window size: $WindowSize"
+}
+
 if ($Detached) {
-    Start-Process -FilePath $ExePath -WorkingDirectory (Split-Path $ExePath -Parent)
+    Start-Process -FilePath $ExePath -WorkingDirectory (Split-Path $ExePath -Parent) -ArgumentList $AppArguments
     exit 0
 }
 
 $Stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
-$Process = Start-Process -FilePath $ExePath -WorkingDirectory (Split-Path $ExePath -Parent) -PassThru -Wait
+$Process = Start-Process -FilePath $ExePath -WorkingDirectory (Split-Path $ExePath -Parent) -ArgumentList $AppArguments -PassThru -Wait
 $Stopwatch.Stop()
 
 $ExitCode = $Process.ExitCode
