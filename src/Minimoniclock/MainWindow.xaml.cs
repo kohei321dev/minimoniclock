@@ -11,11 +11,21 @@ public partial class MainWindow : Window
     private ResizeMode _previousResizeMode;
     private bool _fitModeEnabled;
 
-    public MainWindow()
+    public MainWindow(LaunchOptions? launchOptions = null)
     {
         InitializeComponent();
+        ApplyLaunchOptions(launchOptions);
         Loaded += OnLoaded;
         Closing += (_, _) => (DataContext as IDisposable)?.Dispose();
+    }
+
+    private void ApplyLaunchOptions(LaunchOptions? launchOptions)
+    {
+        if (launchOptions?.Width is not null && launchOptions.Height is not null)
+        {
+            Width = launchOptions.Width.Value;
+            Height = launchOptions.Height.Value;
+        }
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e)

@@ -55,6 +55,13 @@ console を待機させずに起動する場合:
 .\run-minimoniclock.cmd -Detached
 ```
 
+代表サイズで起動する場合:
+
+```powershell
+.\run-minimoniclock.cmd -WindowSize 400x1280
+.\run-minimoniclock.cmd -WindowSize 1280x400
+```
+
 `dotnet run` で直接起動する場合:
 
 ```powershell
@@ -94,6 +101,29 @@ Phase 1 では、アプリ内に縦横切替設定を持たない。モニター
 6. minimoniclock を対象ディスプレイへ移動し、必要なら `FIT` を押す。
 
 Windows 側で横向きにすると、対象ディスプレイは `1280x400` 相当の横長表示になる。minimoniclock はウィンドウの縦横比を見て、自動で `PORTRAIT` / `LANDSCAPE` を切り替える。
+
+## 代表サイズでレイアウトを確認する
+
+実機接続前でも、対象ディスプレイ相当のウィンドウサイズでレイアウトを確認できる。
+
+縦向き相当:
+
+```powershell
+.\run-minimoniclock.cmd -WindowSize 400x1280
+```
+
+横向き相当:
+
+```powershell
+.\run-minimoniclock.cmd -WindowSize 1280x400
+```
+
+確認観点:
+
+- 時刻表示が文字切れしない。
+- 上部の `TOP` / `FIT` 操作が時刻表示を大きく邪魔しない。
+- 下部の `PORTRAIT` / `LANDSCAPE` 表示が見える。
+- ウィンドウをリサイズしても表示方向ラベルが縦横比に追従する。
 
 ## 操作
 
