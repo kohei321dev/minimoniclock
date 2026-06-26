@@ -13,6 +13,14 @@
 - [ ] `dotnet run --project src/Minimoniclock/Minimoniclock.csproj` で起動できる。
 - [ ] ネットワーク接続なしで起動できる。
 
+## 実機ディスプレイ情報
+
+- [ ] `.\scripts\collect-display-info.ps1` でディスプレイ情報を取得できる。
+- [ ] Windows 設定画面で `JN-MD-IPS7842` の表示スケールを確認した。
+- [ ] Windows 上の `JN-MD-IPS7842` のディスプレイ名を記録した。
+- [ ] 縦向き時の論理サイズと作業領域を記録した。
+- [ ] 横向き時の論理サイズと作業領域を記録した。
+
 ## 時計表示
 
 - [ ] 時刻が `HH:mm` の 24 時間表記で表示される。

@@ -80,6 +80,25 @@ dotnet build src/Minimoniclock/Minimoniclock.csproj
 .\src\Minimoniclock\bin\Debug\net8.0-windows\Minimoniclock.exe
 ```
 
+## ディスプレイ情報を確認する
+
+実機検証では、Windows 上の解像度、作業領域、DPI、表示スケールを記録する。
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\collect-display-info.ps1
+```
+
+このスクリプトは Windows が取得できるディスプレイ情報を表示する。DPI や表示スケールは Windows 設定画面の表示と合わせて確認する。
+出力をそのまま公開せず、以下の必要項目だけを docs に転記する。
+
+記録する項目:
+
+- Windows の表示スケール。
+- `JN-MD-IPS7842` の Windows 上のディスプレイ名。
+- 縦向き時の論理サイズと作業領域。
+- 横向き時の論理サイズと作業領域。
+- `FIT` 時にタスクバーや余白が出るか。
+
 ## サブディスプレイへ表示する
 
 1. minimoniclock を起動する。
